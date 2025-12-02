@@ -3,6 +3,10 @@
 :root {
   --background: #0a0a0a;
   --foreground: #ededed;
+  --red: #ff2a70;
+  --black: #1a1a1a;
+  --white: white;
+  --content-width: 1440px;
 }
 
 @theme inline {
@@ -13,7 +17,40 @@
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-image: url("/assets/bg/pattern_bg.jpg");
+  background-repeat: repeat;
+  color: var(--white);
+  font-family: ubuntu;
+  & > div {
+    display: grid;
+    grid-template-columns: 1fr [content] minmax(0, 1440px) 1fr;
+  }
+  h1 {
+    font-weight: 600;
+    font-size: 38px;
+  }
+  h2 {
+    font-weight: 600;
+    font-size: 24px;
+  }
+  nav {
+    li {
+      font-weight: 600;
+      font-size: 24px;
+    }
+  }
+  p {
+    font-size: 18px;
+  }
+  button {
+    font-size: 18px;
+  }
+}
+
+.full-bleed {
+  grid-column: 1/-1;
+}
+
+.content-padding {
+  padding-inline: max(1rem, 50% - var(--content-width) / 2);
 }
