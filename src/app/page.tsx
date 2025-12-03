@@ -1,8 +1,8 @@
 import Image from "next/image";
-import NavBar from "./components/Navbar";
-import Button from "./components/Button";
-import HomeHero from "./components/HomeHero";
-import TitleText from "./components/TitleText";
+import NavBar from "./components/utilityComponents/Navbar";
+import Button from "./components/utilityComponents/Button";
+import HomeHero from "./components/homeComponents/HomeHero";
+import TitleText from "./components/utilityComponents/TitleText";
 
 export default function Home() {
   return (

@@ -96,22 +96,9 @@ const NavBar = ({ page }: NavBarProps) => {
             </li>
           )}
         </Link>
-        {page === "log" ? (
-          <li className="text-(--red) flex flex-col items-center">
-            log in
-            <Image
-              loading="eager"
-              src={"/assets/bottom_line.png"}
-              width={128}
-              height={10}
-              alt={"logo"}
-            />
-          </li>
-        ) : (
-          <li className="hover:text-(--red) transition-all duration-200 ease-in">
-            log in
-          </li>
-        )}
+        <li className="hover:text-(--red) transition-all duration-200 ease-in">
+          log in
+        </li>
       </ul>
       <span className="absolute w-[68px] h-[68px] rotate-45 bg-(--red) top-[-34px] left-[-34px]"></span>
       <span className="absolute w-[68px] h-[68px] rotate-45 bg-(--red) bottom-[-34px] right-[-34px]"></span>
