@@ -51,5 +51,10 @@ export async function submitMail(
       data: parsed.data,
       error: {},
     };
+  } catch (err) {
+    return {
+      success: false,
+      error: { fetch: ["Network error occurred"] },
+    };
+  }
 }
-
