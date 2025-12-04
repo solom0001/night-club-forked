@@ -6,15 +6,16 @@ import TitleText from "./components/utilityComponents/TitleText";
 import PageTitle from "./components/utilityComponents/PageTitle";
 import InputField from "./components/utilityComponents/formUtility/InputField";
 import SubscriptionSection from "./components/homeComponents/SubscriptionSection/SubscriptionSection";
+import SoMeIcons from "./components/utilityComponents/SoMeIcons";
+import Footer from "./components/utilityComponents/footerComps/Footer";
+
+import { FormState } from "./action/action";
 
 export type FormProps = {
   state?: FormState;
   postUser: (formData: FormData) => Promise<FormState>;
   children?: React.ReactNode;
 };
-import SoMeIcons from "./components/utilityComponents/SoMeIcons";
-import Footer from "./components/utilityComponents/footerComps/Footer";
-
 export default function Home() {
   return (
     <div className="full-bleed">
@@ -23,7 +24,6 @@ export default function Home() {
         <NavBar page="home" />
         <PageTitle></PageTitle>
         <SubscriptionSection></SubscriptionSection>
-        <div className="h-[4000px]">hello</div>
         <Footer />
       </div>
     </div>
