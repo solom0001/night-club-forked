@@ -1,6 +1,6 @@
 "use client";
 
-import { useFormState } from "react-dom";
+import { useActionState } from "react";
 import { submitMail, type FormState } from "@/app/action/action";
 import SubscriptionInput from "./SubscriptionInput";
 import Button from "../../utilityComponents/Button";
@@ -14,7 +14,7 @@ const initialState: FormState = {
 };
 
 const Subscription = () => {
-  const [state, formAction] = useFormState(submitMail, initialState);
+  const [state, formAction] = useActionState(submitMail, initialState);
 
   return (
     <div className="w-full justify-center px-[2rem] text-center flex flex-col gap-4">
