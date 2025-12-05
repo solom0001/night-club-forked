@@ -2,8 +2,13 @@
 
 import { useState } from "react";
 
+type CarouselProps = {
+  slot1: React.ReactNode;
+  slot2?: React.ReactNode;
+  slot3?: React.ReactNode;
+};
 /*skal finde ud af hvilke type man skal sætte disse slots til */
-const CarouselOne = ({ slot1, slot2, slot3 }: { slot1: any; slot2: any; slot3: any }) => {
+const CarouselOne = ({ slot1, slot2, slot3 }: CarouselProps) => {
   const [currentImg, setCurrentImg] = useState<string>("secondImg");
 
   const handleCarousel = (id: number) => {
