@@ -7,11 +7,13 @@ type BlogPostProps = {
     title: string;
     content: string;
     author: string;
+    commentCount: number;
   };
 };
 
 const BlogPostContent = ({ post }: BlogPostProps) => {
-  function breakText(text: string, n: number) {
+  function breakText(text: string | undefined, n: number) {
+    if (!text) return [];
     const regex = new RegExp(`(.{1,${n}})(\\s|$)`, "g");
     return text.match(regex)?.map((line) => line.trim()) || [text];
   }
@@ -31,7 +33,7 @@ const BlogPostContent = ({ post }: BlogPostProps) => {
       <div className="flex text-(--red) gap-2 items-center">
         <p>BY: {post.author}</p>
         <span>/</span>
-        <p>n Comments</p>
+        <p>{post.commentCount} Comments</p>
         <span>/</span>
         <p>
           {new Date().toLocaleDateString("en-GB", {

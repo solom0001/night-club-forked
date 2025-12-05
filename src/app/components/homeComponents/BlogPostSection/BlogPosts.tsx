@@ -13,16 +13,6 @@ type BlogPost = {
   author: string;
 };
 
-type BlogResponse = BlogPost[];
-
-const BlogPosts = async () => {
-  return (
-    <Suspense>
-      <FetchPosts />
-    </Suspense>
-  );
-};
-
 type Commentdata = {
   id: number;
   blogpostid: number;
@@ -32,6 +22,15 @@ type Commentdata = {
 };
 
 type CommentResponse = Commentdata[];
+type BlogResponse = BlogPost[];
+
+const BlogPosts = async () => {
+  return (
+    <Suspense>
+      <FetchPosts />
+    </Suspense>
+  );
+};
 
 const FetchPosts = async () => {
   "use server";
