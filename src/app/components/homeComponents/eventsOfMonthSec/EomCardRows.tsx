@@ -7,7 +7,7 @@ type Card = {
   date: string;
   time: string;
   location: string;
-  assetUrl: string;
+ assetUrl: string;
 };
 
 type CardProps = {
@@ -16,14 +16,17 @@ type CardProps = {
 };
 
 const CardRow=({card1,card2}:CardProps)=>{
+  
     return(
-        <div className="flex gap-4 w-full">
+        <div className="grid grid-cols-2 gap-4 w-full h-full">
             <EomCard 
             title={card1.title}
             desc={card1.desc}
             date={card1.date}
             time={card1.time}
             location={card1.location}
+            url={card1.assetUrl}
+          
             />
             <EomCard 
             title={card2.title}
@@ -31,6 +34,7 @@ const CardRow=({card1,card2}:CardProps)=>{
             date={card2.date}
             time={card2.time}
             location={card2.location}
+            url={card2.assetUrl}
             />
         </div>
     )

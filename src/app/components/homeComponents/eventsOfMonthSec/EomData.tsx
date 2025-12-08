@@ -21,14 +21,19 @@ type Card = {
 };
 
 // Convert Event → Card
-const toCard = (e: Event): Card => ({
-  title: e.title,
-  desc: e.description,
-  date: e.date,
-  time: "22:00", // TODO add correct field if available
-  location: e.location,
-  assetUrl: e.asset.url,
-});
+const toCard = (e: Event): Card => {
+  const [date, timeFull] = e.date.split("T");
+  const time = timeFull.slice(0, 5);
+
+  return {
+    title: e.title,
+    desc: e.description,
+    date: date,
+    time: time, //toDo
+    location: e.location,
+    assetUrl: e.asset.url,
+  };
+};
 
 const EomData = async () => {
   const url = "http://localhost:4000/events";
@@ -51,31 +56,11 @@ const EomData = async () => {
   const slide2 = cardPairs[1] ?? null;
   const slide3 = cardPairs[2] ?? null;
 
+  console.log("Events fetched:", events, "Card pairs:", cardPairs);
+
   return (
     <Suspense>
-      <CarouselOne
-        slot1={
-          slide1 ? (
-            <CardRow card1={slide1.card1} card2={slide1.card2} />
-          ) : (
-            <div>No events</div>
-          )
-        }
-        slot2={
-          slide2 ? (
-            <CardRow card1={slide2.card1} card2={slide2.card2} />
-          ) : (
-            <div>No events</div>
-          )
-        }
-        slot3={
-          slide3 ? (
-            <CardRow card1={slide3.card1} card2={slide3.card2} />
-          ) : (
-            <div>No events</div>
-          )
-        }
-      />
+      <CarouselOne slot1={slide1 ? <CardRow card1={slide1.card1} card2={slide1.card2} /> : <div>No events</div>} slot2={slide2 ? <CardRow card1={slide2.card1} card2={slide2.card2} /> : <div>No events</div>} slot3={slide3 ? <CardRow card1={slide3.card1} card2={slide3.card2} /> : <div>No events</div>} />
     </Suspense>
   );
 };
