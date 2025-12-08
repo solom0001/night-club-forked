@@ -2,8 +2,13 @@
 
 import { useState } from "react";
 
-/*skal finde ud af hvilke type man skal sætte disse slots til */
-const CarouselOne = ({ slot1, slot2, slot3 }: { slot1: any; slot2: any; slot3: any }) => {
+type CarouselProps = {
+  slot1: React.ReactNode;
+  slot2: React.ReactNode;
+  slot3: React.ReactNode;
+};
+
+const CarouselOne = ({ slot1, slot2, slot3 }: CarouselProps) => {
   const [currentImg, setCurrentImg] = useState<string>("secondImg");
 
   const handleCarousel = (id: number) => {
@@ -16,27 +21,23 @@ const CarouselOne = ({ slot1, slot2, slot3 }: { slot1: any; slot2: any; slot3: a
     }
   };
   return (
-    <div className="flex flex-col w-fit items-center gap-4">
-      <div
-        className="overflow-hidden w-[650px] h-[400px] [&>*]:h-full [&>*]:w-full relative
-      
-      "
-      >
+    <div className="items-center h-[400px] md:h-[500px] lg:h-[550px] w-full gap-8 flex flex-col  ">
+      <div className="overflow-hidden w-full  aspect-[2/1] [&>*]:h-full [&>*]:w-full relative ">
         <div
-          className={`absolute inset-0 transition-transform duration-500 
-            ${currentImg === "firstImg" ? "translate-x-0" : "-translate-x-full"} bg-red-300! `}
+          className={`absolute inset-0 transition-transform  duration-500 
+            ${currentImg === "firstImg" ? "translate-x-0" : "-translate-x-full"} `}
         >
           {slot1}
         </div>
         <div
-          className={`absolute inset-0 transition-transform duration-500 
-            ${currentImg === "secondImg" ? "translate-x-0" : currentImg === "firstImg" ? "translate-x-full" : "-translate-x-full"} bg-blue-300!`}
+          className={`absolute inset-0 transition-transform duration-500  
+            ${currentImg === "secondImg" ? "translate-x-0" : currentImg === "firstImg" ? "translate-x-full" : "-translate-x-full"}`}
         >
           {slot2}
         </div>
         <div
-          className={`absolute inset-0 transition-transform duration-500 
-            ${currentImg === "thirdImg" ? "translate-x-0" : "translate-x-full"} bg-yellow-300!`}
+          className={`absolute inset-0 transition-transform duration-500  
+            ${currentImg === "thirdImg" ? "translate-x-0" : "translate-x-full"}`}
         >
           {slot3}
         </div>
