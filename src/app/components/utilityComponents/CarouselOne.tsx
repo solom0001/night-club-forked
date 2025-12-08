@@ -6,9 +6,10 @@ type CarouselProps = {
   slot1: React.ReactNode;
   slot2: React.ReactNode;
   slot3: React.ReactNode;
+  pushStyle: string;
 };
 
-const CarouselOne = ({ slot1, slot2, slot3 }: CarouselProps) => {
+const CarouselOne = ({ slot1, slot2, slot3, pushStyle }: CarouselProps) => {
   const [currentImg, setCurrentImg] = useState<string>("secondImg");
 
   const handleCarousel = (id: number) => {
@@ -21,7 +22,7 @@ const CarouselOne = ({ slot1, slot2, slot3 }: CarouselProps) => {
     }
   };
   return (
-    <div className="items-center h-[400px] md:h-[500px] lg:h-[550px] w-full gap-8 flex flex-col  ">
+    <div className={`items-center h-[400px] md:h-[500px] lg:h-[550px] w-full gap-8 flex flex-col relative ${pushStyle}`}>
       <div className="overflow-hidden w-full  aspect-[2/1] [&>*]:h-full [&>*]:w-full relative ">
         <div
           className={`absolute inset-0 transition-transform  duration-500 

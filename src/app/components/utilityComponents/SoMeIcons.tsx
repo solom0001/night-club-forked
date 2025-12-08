@@ -3,7 +3,7 @@ import { TiSocialFacebook } from "react-icons/ti";
 import { TiSocialTwitter } from "react-icons/ti";
 import { FaSnapchatGhost } from "react-icons/fa";
 
-const SoMeIcons = ({facebook,twitter,snapchat}: {facebook: string, twitter: string, snapchat: string}) => {
+const SoMeIcons = ({facebook,twitter,snapchat}: {facebook?: string, twitter?: string, snapchat?: string}) => {
   return (
     <div
       className="flex flex-nowrap gap-4 justify-between min-w-0 max-w-[150px] [&>*]:aspect-square [&>*]:border-2 [&>*]:border-(--white)
