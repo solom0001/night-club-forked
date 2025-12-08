@@ -44,7 +44,7 @@ const NavBar = ({ page }: NavBarProps) => {
             </li>
           )}
         </Link>
-        <Link href={"/"}>
+        <Link href={"/blogPost"}>
           {page === "blog" ? (
             <li className="text-(--red) flex flex-col items-center">
               blog

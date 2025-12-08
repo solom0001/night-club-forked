@@ -4,6 +4,7 @@ import Footer from "@/app/components/utilityComponents/footerComps/Footer";
 import { Suspense } from "react";
 import BlogPostContent from "@/app/components/blogPost/BlogPostContent";
 import Comments from "@/app/components/blogPost/Comments";
+import NewComment from "@/app/components/blogPost/NewComment/NewComment";
 
 type BlogPost = {
   id: number;
@@ -52,6 +53,7 @@ export default async function BlogPostSite({
         <PageTitle text="blog post" />
         <BlogPostContent post={postWithComments} />
         <Comments id={id} />
+        <NewComment blogpostId={id} />
         <Footer />
       </div>
     </Suspense>

@@ -30,8 +30,8 @@ const Subscription = () => {
         <Button text="Subscribe" type="submit" />
       </form>
 
-      <Error state={state} stateType="subscriptionMail" />
-      <Success
+      <Error<FormState> state={state} stateType="subscriptionMail" />
+      <Success<FormState>
         state={state}
         text="You have succussfully signed up for our newsletter"
       ></Success>
