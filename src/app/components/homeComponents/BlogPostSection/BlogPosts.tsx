@@ -55,7 +55,7 @@ const FetchPosts = async () => {
   console.log(postsWithComments);
 
   return (
-    <div className="grid items-center gap-12 py-[90px]">
+    <div className="grid items-center py-[90px]">
       <TitleText text="recent blog" />
 
       <div className="grid grid-cols-3 gap-6">
