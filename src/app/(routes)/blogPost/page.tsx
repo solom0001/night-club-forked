@@ -3,7 +3,7 @@ import PageTitle from "@/app/components/utilityComponents/PageTitle";
 import Footer from "@/app/components/utilityComponents/footerComps/Footer";
 import { Suspense } from "react";
 
-import Blogs from "@/app/components/blogComponents/Blogs"; // KEEP THIS
+import Blogs from "@/app/components/blogComponents/Blogs";
 
 async function BlogsPage({ page }: { page: number }) {
   return (
