@@ -36,7 +36,7 @@ const FetchPosts = async ({
   page,
   limit = 3,
 }: {
-  page?: number;
+  page: number;
   limit?: number;
 }) => {
   "use server";
