@@ -12,7 +12,7 @@ import Footer from "./components/utilityComponents/footerComps/Footer";
 import { FormState } from "./action/action";
 import TestimonialData from "./components/homeComponents/testimonials/TestimonialData";
 import EomData from "./components/homeComponents/eventsOfMonthSec/EomData";
-import WelcomeSec from "./components/homeComponents/WelcomeSec";
+import WelcomeSec from "./components/homeComponents/welcomeSecComps/WelcomeSec";
 import BlogPosts from "./components/homeComponents/BlogPostSection/BlogPosts";
 
 export type FormProps = {
