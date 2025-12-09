@@ -35,46 +35,41 @@ const EomCard = ({ desc, time, location, title, date, url }: CardProps) => {
   };
 
   return (
-    <motion.div variants={parentVariants} initial="rest" whileHover="hover" className=" w-full h-[100%] grid grid-rows-[5fr_0.2fr] overflow-hidden ">
+    <motion.div variants={parentVariants} initial="rest" whileHover="hover" className=" group w-full h-[100%] grid grid-rows-[5fr_0.2fr] overflow-hidden ">
+      {/* billede og Tekst layer--------------------------------------------------*/}
       <div
-        className="grid grid-cols-1 grid-rows-1 [&>*]:row-span-full [&>*]:col-span-full relative z-5 border-b-1 border-(--black)
-        hover:before:content-[''] hover:before:absolute 
-          hover:before:w-[50px] hover:before:h-[150px] 
-          hover:before:bg-(--red) hover:before:bottom-[-40]  
-          hover:before:right-[-25] before:z-15 hover:before:rotate-45 overflow-hidden
-      "
+        className="grid grid-cols-1 grid-rows-1 [&>*]:row-span-full [&>*]:col-span-full relative z-5 border-b-1 border-(--black) hover:before:content-[''] hover:before:absolute 
+          hover:before:w-[50px] hover:before:h-[150px] hover:before:bg-(--red) hover:before:bottom-[-40]  hover:before:right-[-25] before:z-15 hover:before:rotate-45 overflow-hidden"
       >
-        <div className="w-full h-full flex flex-col relative z-10 ">
-          <motion.span
-            variants={topVariants}
-            className="
-          flex w-full h-[70%] items-center 
-          before:content-[''] before:absolute 
-          before:w-[120px] before:h-[200px] 
-          before:bg-(--red) before:top-[-100] 
-          before:left-[-75]   before:rotate-45 relative
-          "
-          >
+        {/*tetx layer------------------------------------>*/}
+
+        {/*(Top elements)----->*/}
+        <div className="w-full h-full flex flex-col relative z-10 group-hover:border-t group-hover:border-(--red) ">
+          <motion.span variants={topVariants} className="flex w-full h-[70%] items-center before:content-[''] before:absolute before:w-[120px] before:h-[200px] before:bg-(--red) before:top-[-100] before:left-[-75] before:rotate-45 relative">
             <a className="px-4 py-2 mx-auto bg-(--red) text-(--white)" href="#">
               Book Now
             </a>
           </motion.span>
-          <motion.div
-            variants={bottomVariants}
-            className="
-          h-[30%] flex w-full relative
-          "
-          >
-            <span className="flex flex-col p-4 bg-background/90 h-full overflow-y-auto">
+
+          {/*(bottom elements)----->*/}
+          <motion.div variants={bottomVariants} className="h-[30%] flex w-full relative">
+            <span className="flex flex-col p-4 bg-background/90 h-full overflow-y-auto ">
               <h2 className="">{title}</h2>
               <p>{desc}</p>
             </span>
           </motion.div>
         </div>
-        <div>
+
+        {/*billede layer------------------------------------>*/}
+        <div
+          className="group-hover:border-t group-hover:border-b border-(--red) after:content-[''] after:absolute after:inset-0 after:w-full after:h-full 
+        after:bg-black/0 after:pointer-events-none group-hover:after:bg-black/50"
+        >
           <Image src={url} alt="event of month" width={400} height={400} unoptimized className="w-full h-full object-cover" />
         </div>
       </div>
+
+      {/* Description layer--------------------------------------------------*/}
       <span className="bg-(--red) p-4 relative z-100">
         <ul className="flex flex-nowrap ml-auto gap-4 list-none">
           <li>{date}</li>

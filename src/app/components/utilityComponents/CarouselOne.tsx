@@ -6,7 +6,7 @@ type CarouselProps = {
   slot1: React.ReactNode;
   slot2: React.ReactNode;
   slot3: React.ReactNode;
-  pushStyle: string;
+  pushStyle?: string;
 };
 
 const CarouselOne = ({ slot1, slot2, slot3, pushStyle }: CarouselProps) => {
