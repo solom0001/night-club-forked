@@ -7,8 +7,6 @@
   --black: #1a1a1a;
   --white: white;
   --content-width: 1440px;
-
-  
 }
 
 @theme inline {
@@ -66,4 +64,10 @@ body {
   background-image: url(/assets/bg/footerbg.jpg);
   background-size: cover;
   background-position: center;
+}
+
+.font-scale {
+  h1 {
+    font-size: clamp(1.125rem, 0.7083rem + 1.8519vw, 2.375rem);
+  }
 }

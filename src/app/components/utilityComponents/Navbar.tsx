@@ -62,7 +62,7 @@ const NavBar = ({ page }: NavBarProps) => {
             </li>
           )}
         </Link>
-        <Link href={"/"}>
+        <Link href={"/book"}>
           {page === "book" ? (
             <li className="text-(--red) flex flex-col items-center">
               book table
