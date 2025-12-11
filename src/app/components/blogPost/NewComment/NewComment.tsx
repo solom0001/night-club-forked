@@ -21,7 +21,7 @@ const SubmitCommentBtn = () => {
 };
 const NewComment = ({ blogpostId }: { blogpostId: number }) => {
   const [state, formAction] = useActionState(submitComment, initialState);
-
+  const { pending } = useFormStatus();
   return (
     <form action={formAction} className="flex flex-col gap-8 pb-[90px]">
       <h1 className="text-[44px] uppercase">Leave a Comment</h1>
