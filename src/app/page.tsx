@@ -15,6 +15,7 @@ import EomData from "./components/homeComponents/eventsOfMonthSec/EomData";
 import WelcomeSec from "./components/homeComponents/welcomeSecComps/WelcomeSec";
 import BlogPosts from "./components/homeComponents/BlogPostSection/BlogPosts";
 import VideoSection from "./components/homeComponents/RecentVidsSection/VideoSection";
+import MusicPlayer from "./components/homeComponents/MusicPlayerSection/MusicPlayerComponent";
 
 export type FormProps = {
   state?: FormState;
@@ -35,6 +36,7 @@ export default function Home() {
           <TitleText text="Events of the Month" />
           <EomData />
         </div>
+        <MusicPlayer />
         <VideoSection />
         <TestimonialData />
         <BlogPosts></BlogPosts>
