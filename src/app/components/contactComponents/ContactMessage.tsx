@@ -7,11 +7,18 @@ import InputField from "@/app/components/utilityComponents/formUtility/InputFiel
 import InputBox from "@/app/components//utilityComponents/formUtility/InputBox";
 import Error from "@/app/components//utilityComponents/formUtility/Error";
 import Success from "@/app/components//utilityComponents/formUtility/Success";
+import { useFormStatus } from "react-dom";
 
 const initialState: ContactFormState = {
   success: false,
   data: undefined,
   error: {},
+};
+
+const SubmitContactBtn = () => {
+  const { pending } = useFormStatus();
+
+  return <Button text="Submit" type="submit" pending={pending} />;
 };
 
 const ContactMessage = () => {
@@ -57,7 +64,7 @@ const ContactMessage = () => {
       <div className="flex justify-between">
         <Success<ContactFormState> state={state} text="Comment added!" />
         <div className="ml-auto">
-          <Button text="Submit" type="submit" />
+          <SubmitContactBtn />
         </div>
       </div>
     </form>
