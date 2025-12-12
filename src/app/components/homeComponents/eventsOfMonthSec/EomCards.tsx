@@ -38,8 +38,8 @@ const EomCard = ({ desc, time, location, title, date, url }: CardProps) => {
     <motion.div variants={parentVariants} initial="rest" whileHover="hover" className=" group w-full h-[100%] grid grid-rows-[5fr_0.2fr] overflow-hidden ">
       {/* billede og Tekst layer--------------------------------------------------*/}
       <div
-        className="grid grid-cols-1 grid-rows-1 [&>*]:row-span-full [&>*]:col-span-full relative z-5 border-b-1 border-(--black) hover:before:content-[''] hover:before:absolute 
-          hover:before:w-[50px] hover:before:h-[150px] hover:before:bg-(--red) hover:before:bottom-[-40]  hover:before:right-[-25] before:z-15 hover:before:rotate-45 overflow-hidden"
+        className="grid grid-cols-1 grid-rows-1 [&>*]:row-span-full [&>*]:col-span-full relative z-5 border-b-1 border-(--black) hover:before:content-[''] before:absolute 
+          before:w-[50px] before:h-[150px] before:bg-(--red) before:bottom-[-40]  before:right-[-25] before:z-15 before:rotate-45 overflow-hidden"
       >
         {/*tetx layer------------------------------------>*/}
 
