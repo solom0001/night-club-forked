@@ -132,6 +132,7 @@ body {
   .rhap_volume-indicator {
     background: var(--white);
   }
+}
 /*div corner styling utility*/
 
 .hover-border {
