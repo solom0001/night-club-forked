@@ -16,6 +16,7 @@ import WelcomeSec from "./components/homeComponents/welcomeSecComps/WelcomeSec";
 import BlogPosts from "./components/homeComponents/BlogPostSection/BlogPosts";
 import VideoSection from "./components/homeComponents/RecentVidsSection/VideoSection";
 import MusicPlayer from "./components/homeComponents/MusicPlayerSection/MusicPlayerComponent";
+import GalleryData from "./components/homeComponents/GallerySection/GalleryData";
 
 export type FormProps = {
   state?: FormState;
@@ -37,6 +38,12 @@ export default function Home() {
           <EomData />
         </div>
         <MusicPlayer />
+
+        <div className=" items-center justify-center full-bleed grid grid-cols-[1fr_minmax(0,1440px)_1fr] [&>*]:col-start-2 py-[90px] gap-6">
+          <TitleText text="night club gallery" />
+          <GalleryData />
+        </div>
+
         <VideoSection />
         <TestimonialData />
         <BlogPosts></BlogPosts>
