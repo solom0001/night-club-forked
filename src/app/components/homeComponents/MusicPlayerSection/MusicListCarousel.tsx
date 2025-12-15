@@ -75,8 +75,8 @@ const MusicListCarousel = ({
                         {song.title}
                       </h2>
                       <img
-                        src="/assets/icon/Play.svg"
-                        className="h-[52px] w-[52px] p-1 pl-2 rounded-[50%]  border-5 border-(--red) absolute top-[40%] left-[40%]"
+                        src="/assets/icon/Playing.svg"
+                        className="h-[52px] w-[52px] p-1 pl-1 rounded-[50%]  border-5 border-(--red) absolute top-[40%] left-[40%]"
                       />
                       <span className="w-[84px] h-[84px] bg-(--red) absolute rotate-45 bottom-[-30px] right-[-42px]" />
                       <span className="w-[84px] h-[84px] bg-(--red) absolute rotate-45 top-[-30px] left-[-42px]" />
