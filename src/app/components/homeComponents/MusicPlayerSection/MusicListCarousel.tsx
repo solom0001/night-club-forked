@@ -71,16 +71,14 @@ const MusicListCarousel = ({
                   />
                   {isActive && (
                     <div className="absolute inset-0 grid overflow-hidden">
-                      {" "}
                       <h2 className="uppercase text-[20px]! text-center text-sm mt-auto h-[4rem] py-2 w-full bg-black/90">
-                        {" "}
-                        {song.title}{" "}
-                      </h2>{" "}
-                      <span className="w-[84px] h-[84px] bg-(--red) absolute rotate-45 bottom-[-30px] right-[-42px]" />{" "}
-                      <span className="w-[84px] h-[84px] bg-(--red) absolute rotate-45 top-[-30px] left-[-42px]" />{" "}
+                        {song.title}
+                      </h2>
+                      <span className="w-[84px] h-[84px] bg-(--red) absolute rotate-45 bottom-[-30px] right-[-42px]" />
+                      <span className="w-[84px] h-[84px] bg-(--red) absolute rotate-45 top-[-30px] left-[-42px]" />
                     </div>
-                  )}{" "}
-                </div>{" "}
+                  )}
+                </div>
               </div>
             );
           })}

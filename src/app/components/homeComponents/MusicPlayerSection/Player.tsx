@@ -17,43 +17,47 @@ const Player = ({ musicList, current }: PlayerProps) => {
 
   return (
     <div className="grid grid-cols-[340px_minmax(0,1100px)]">
-      <Image
-        loading="eager"
-        src={track.img}
-        width={300}
-        height={300}
-        alt={track.title}
-        className="aspect-square"
-      />
-      <div className="flex flex-col gap-4 px-8 py-10">
-        <h2 className="ml-4">{track.title}</h2>
-        <AudioPlayer
-          key={track.song}
-          src={track.song}
-          autoPlay={false}
-          customIcons={{
-            play: (
-              <img
-                src="/assets/icon/Play.svg"
-                className="h-[52px] w-[52px] p-1 pl-2 rounded-[50%] border-5 border-(--white)"
-              />
-            ),
-            rewind: (
-              <img src="/assets/icon/fast-backward.svg" className="w-8" />
-            ),
-            forward: (
-              <img src="/assets/icon/fast-forward.svg" className="w-8" />
-            ),
-          }}
-          customAdditionalControls={[]}
-          customProgressBarSection={[
-            RHAP_UI.CURRENT_TIME,
-            <div className="mx-2"> / </div>,
-            RHAP_UI.DURATION,
-            RHAP_UI.PROGRESS_BAR,
-          ]}
-        />{" "}
-      </div>{" "}
+      <div className="w-[340px] h-[300px] overflow-hidden">
+        <Image
+          loading="eager"
+          src={track.img}
+          width={340}
+          height={300}
+          alt={"track image"}
+          className=""
+        />
+      </div>
+      <div className="Flex flex-col gap-4 px-8 py-10">
+        <h2 className="ml-4 uppercase">{track.title}</h2>
+        <div className="my-player">
+          <AudioPlayer
+            src={track.song}
+            autoPlay={false}
+            volume={0.4}
+            customIcons={{
+              play: (
+                <img
+                  src="/assets/icon/Play.svg"
+                  className="h-[52px] w-[52px] p-1 pl-2 rounded-[50%]  border-5 border-(--white)"
+                />
+              ),
+              rewind: (
+                <img src="/assets/icon/fast-backward.svg" className="w-8" />
+              ),
+              forward: (
+                <img src="/assets/icon/fast-forward.svg" className="w-8" />
+              ),
+            }}
+            customAdditionalControls={[]}
+            customProgressBarSection={[
+              RHAP_UI.CURRENT_TIME,
+              <div className="mx-2"> / </div>,
+              RHAP_UI.DURATION,
+              RHAP_UI.PROGRESS_BAR,
+            ]}
+          />
+        </div>
+      </div>
     </div>
   );
 };
