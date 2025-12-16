@@ -60,7 +60,7 @@ const GalleryDisplay = ({ gallery }: GalleryProps) => {
   const gridAreas: string[] = ["a", "b", "c", "d", "e", "f", "g"];
 
   return (
-    <div className="flex w-full h-[950px] lg:h-[800px] full-bleed overflow-hidden">
+    <div className="flex w-full h-fit lg:h-[800px] full-bleed overflow-hidden">
       <motion.div ref={ref} variants={parentVariants} initial="hidden" animate={isInView ? "show" : "hidden"} className=" grid gallery-grid w-full h-full min-h-full flex-shrink-0 gap-0 hover-tag-top hover-tag-bottom *:hover:cursor-pointer">
         {gallery.map((item, index) => (
           <motion.div
@@ -110,3 +110,24 @@ const GalleryDisplay = ({ gallery }: GalleryProps) => {
 };
 
 export default GalleryDisplay;
+
+// <div className={`items-center gap-4 h-[650px] md:h-[500px] flex flex-col justify-between lg:h-[650px] w-full relative ${pushStyle}`}>
+//   <div className="overflow-x-scroll snap-x snap-mandatory w-full h-100 lg:relative flex flex-5 lg:flex-row lg:overflow-hidden ">
+//     {slides.map((slide, index) => (
+//       <div
+//         key={slide.id}
+//         className={`min-w-full h-full flex items-center justify-center snap-center
+//           lg:absolute inset-0 min-w-0  transition-transform duration-500 ${index === isCurrent ? "translate-x-0" : index < isCurrent ? "-translate-x-full" : "translate-x-full"}
+//           `}
+//       >
+//         {slide.element}
+//       </div>
+//     ))}
+//   </div>
+//   {/* -----contntroller boxes----- */}
+//   <div className="w-fit mx-auto [&>*]:min-w-4 [&>*]:bg-(--white) [&>*]:hover:scale-105 [&>*]:hover:cursor-pointer transition-all ease-in-out duration-100 gap-5 flex flex-1 items-center  flex-nowrap">
+//     {slides.map((e, i) => (
+//       <div key={e.id} onClick={() => handleSlide(i)} className={`w-6 h-6  ${i === isCurrent ? "bg-(--red)! h-5!" : ""}`}></div>
+//     ))}
+//   </div>
+// </div>;
