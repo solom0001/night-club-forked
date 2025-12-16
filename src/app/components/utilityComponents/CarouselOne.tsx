@@ -1,6 +1,6 @@
 "use client";
-import Image from "next/image";
 import { ReactNode, useState } from "react";
+import { useRef } from "react";
 
 type Slide = {
   id: number;
@@ -19,22 +19,48 @@ const CarouselOne = ({ slides, pushStyle }: CarouselProps) => {
     setCurrent(i);
   };
 
+  //---- mobile carousel----->
+  const ref = useRef<HTMLDivElement>(null);
+
+  const onScroll = () => {
+    if (!ref.current) return;
+
+    const { scrollLeft, clientWidth } = ref.current;
+
+    const index = Math.round(scrollLeft / (clientWidth * 1));
+    setCurrent(index);
+  };
+
   return (
-    <div className={`items-center gap-4 h-[400px] md:h-[500px] flex flex-col justify-between lg:h-[650px] w-full relative ${pushStyle}`}>
-      <div className="overflow-x-scroll snap-x snap-mandatory  lg:w-full h-100 lg:relative flex flex-5 lg:flex-row lg:overflow-hidden ">
+    <div className={`items-center gap-4 h-[670px] flex-col justify-between w-full relative ${pushStyle}`}>
+      {/* -----carousel------ */}
+
+      <div className="w-full h-full relative hidden lg:flex flex-5 flex-row overflow-hidden ">
         {slides.map((slide, index) => (
           <div
             key={slide.id}
-            className={`min-w-full h-full flex items-center justify-center snap-center
-          lg:absolute lg:inset-0 lg:min-w-0  transition-transform duration-500 ${index === isCurrent ? "translate-x-0" : index < isCurrent ? "-translate-x-full" : "translate-x-full"}
+            className={`w-full h-full flex items-center 
+          absolute inset-0 transition-transform duration-500 ${index === isCurrent ? "translate-x-0" : index < isCurrent ? "-translate-x-full" : "translate-x-full"}
           `}
           >
             {slide.element}
           </div>
         ))}
       </div>
-      {/* -----contntroller boxes----- */}
-      <div className="w-fit mx-auto [&>*]:min-w-4 [&>*]:bg-(--white) [&>*]:hover:scale-105 [&>*]:hover:cursor-pointer transition-all ease-in-out duration-100 gap-5 flex flex-1 items-center  flex-nowrap">
+
+      {/*--- mobile ---*/}
+
+      <div ref={ref} onScroll={onScroll} className="w-full h-full relative lg:hidden flex flex-5 flex-row overflow-x-auto snap-x snap-mandatory ">
+        {slides.map((slide, index) => (
+          <div key={slide.id} className={`w-full h-full flex items-center snap-center shrink-0 `}>
+            {slide.element}
+          </div>
+        ))}
+      </div>
+
+      {/* -----contntroller boxes------ */}
+
+      <div className="w-fit mx-auto [&>*]:min-w-4 [&>*]:bg-(--white) [&>*]:hover:scale-105 [&>*]:hover:cursor-pointer transition-all ease-in-out duration-100 gap-5 flex flex-1 items-center  flex-nowrap mt-4">
         {slides.map((e, i) => (
           <div key={e.id} onClick={() => handleSlide(i)} className={`w-6 h-6  ${i === isCurrent ? "bg-(--red)! h-5!" : ""}`}></div>
         ))}

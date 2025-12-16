@@ -53,9 +53,22 @@ const EomData = async () => {
     slides.push({
       id: i / 2,
       element: (
-        <div className="grid grid-cols-2 gap-4 w-full">
+        <div className="grid lg:grid-cols-2 gap-4 w-full">
           <EomCard title={card1.title} desc={card1.desc} date={card1.date} time={card1.time} location={card1.location} url={card1.assetUrl} />
           {card2 && <EomCard title={card2.title} desc={card2.desc} date={card2.date} time={card2.time} location={card2.location} url={card2.assetUrl} />}
+        </div>
+      ),
+    });
+  }
+  const slides2 = [];
+  for (let i = 0; i < cards.length; i++) {
+    const card = cards[i];
+
+    slides2.push({
+      id: i,
+      element: (
+        <div className="grid lg:grid-cols-2 gap-4 w-full">
+          <EomCard title={card.title} desc={card.desc} date={card.date} time={card.time} location={card.location} url={card.assetUrl} />
         </div>
       ),
     });
@@ -63,7 +76,12 @@ const EomData = async () => {
 
   return (
     <Suspense>
-      <CarouselOne slides={slides} />
+      <div className="hidden lg:flex">
+        <CarouselOne slides={slides} />
+      </div>
+      <div className="flex lg:hidden">
+        <CarouselOne slides={slides2} pushStyle="h-[500px]!" />
+      </div>
     </Suspense>
   );
 };
