@@ -18,7 +18,7 @@ export default function ReserveSection() {
 
   return (
     <div className="mt-8">
-      <Tables day={day} reservations={reservations} />
+      <Tables reservations={reservations} />
       <ReserveForm
         day={day}
         setDay={(d: string) => {

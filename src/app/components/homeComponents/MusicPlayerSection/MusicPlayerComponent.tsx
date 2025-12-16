@@ -48,7 +48,7 @@ const MusicPlayer = () => {
   const [current, setCurrent] = useState<number>(0);
 
   return (
-    <div className="full-bleed bg-black h-[936px] w-full py-[90px]">
+    <div className="full-bleed bg-black h-fit w-full py-[30px] sm:py-[90px]">
       <div className="w-fit mx-auto">
         <TitleText text="Night Club Track" />
       </div>
