@@ -19,7 +19,7 @@ const VideoSection = () => {
   ];
 
   return (
-    <div className="full-bleed sm:content-padding flex flex-col h-full py-[90px] gap-6 w-full relative">
+    <div className="full-bleed sm:content-padding flex flex-col h-full py-[30px] sm:py-[90px] gap-6 w-full relative">
       <TitleText text="latest video" />
       <CarouselTwo slides={slides} />
     </div>

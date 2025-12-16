@@ -49,7 +49,7 @@ const CarouselTwo = ({ slides, pushStyle }: CarouselProps) => {
           </div>
         ))}
       </div>
-      <div className="*:border *:p-1 flex flex-1 flex-row w-fit mt-8 gap-4 mx-auto">
+      <div className="*:border *:p-1 flex flex-1 flex-row w-fit mt-2 gap-4 mx-auto">
         <div
           onClick={prev}
           className="flex items-center justify-center  transition-all duration-200 group border(--white) hover:scale-105 hover:border-(--red) "

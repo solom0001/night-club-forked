@@ -58,7 +58,7 @@ const FetchPosts = async () => {
     <div className="grid items-center sm:py-[90px] py-[30px] full-bleed content-padding">
       <TitleText text="recent blog" />
 
-      <div className="grid sm:grid-cols-3 gap-6 grid-cols-1">
+      <div className="grid sm:grid-cols-3 gap-6 grid-cols-1 mt-4 sm:mt-0">
         {postsWithComments.map((post) => (
           <Link
             href={`/blogPost/${post.id}`}

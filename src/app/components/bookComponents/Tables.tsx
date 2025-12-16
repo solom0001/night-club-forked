@@ -1,12 +1,10 @@
 import Image from "next/image";
 
-// Props type
 type TablesProps = {
-  day: string;
   reservations: any[];
 };
 
-function Tables({ day, reservations }: TablesProps) {
+function Tables({ reservations }: TablesProps) {
   console.log("Current reservations:", reservations);
 
   return (
