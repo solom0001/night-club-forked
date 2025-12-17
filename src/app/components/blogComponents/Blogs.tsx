@@ -67,7 +67,6 @@ const FetchPosts = async ({
           key={post.id}
           className="sm:grid min-h-[530px] sm:grid-cols-[1fr_minmax(0,_720px)_minmax(0,_720px)_1fr] bg-black"
         >
-          {/* IMAGE */}
           <div
             className={`h-full w-full overflow-hidden ${
               post.id % 2 !== 0 ? "col-[1/3]" : "col-[3/5] row-[1]"
@@ -84,7 +83,6 @@ const FetchPosts = async ({
             />
           </div>
 
-          {/* TEXT */}
           <div
             className={`px-4 py-10 flex flex-col gap-2 ${
               post.id % 2 !== 0 ? " sm:pl-10" : " sm:pr-10 col-[2/3] row-[1]"
