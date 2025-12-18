@@ -11,11 +11,12 @@ type Blog = {
 };
 
 const RecentPosts = async () => {
-  const url = "http://localhost:4000/blogposts?limit=2";
+  const url = "http://localhost:4000/blogposts?limit=2&sort=id&order=desc";
   const response = await fetch(url);
   const blogs = (await response.json()) as Blog[];
 
-  const truncate = (text: string, maxLength = 60) => (text.length > maxLength ? text.slice(0, maxLength) + "…" : text);
+  const truncate = (text: string, maxLength = 60) =>
+    text.length > maxLength ? text.slice(0, maxLength) + "…" : text;
 
   console.log("recent blogs:", blogs);
 
@@ -24,12 +25,12 @@ const RecentPosts = async () => {
       <div className="flex flex-col gap-12">
         <h2>Recent posts</h2>
         {blogs.map((blog) => (
-           <Link
+          <Link
             href={`/blogPost/${blog.id}`}
             key={blog.id}
             className="flex flex-col gap-1"
           >
-          <Recents desc={truncate(blog.content)} image={blog.asset.url} />
+            <Recents desc={truncate(blog.content)} image={blog.asset.url} />
           </Link>
         ))}
       </div>
