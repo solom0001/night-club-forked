@@ -29,7 +29,7 @@ export async function submitMail(
     return { success: false, error: parsed.error.flatten().fieldErrors };
   }
   try {
-    await new Promise((resolve) => setTimeout(resolve, 2000));
+    await new Promise((resolve) => setTimeout(resolve, 1000));
     const response = await fetch("http://localhost:4000/newsletters", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -87,11 +87,17 @@ export async function submitComment(
     return {
       success: false,
       error: parsed.error.flatten().fieldErrors,
+      data: {
+        blogpostId: Number(formData.get("blogpostId")),
+        userName: formData.get("userName") as string,
+        userMail: formData.get("userMail") as string,
+        comment: formData.get("comment") as string,
+      },
     };
   }
 
   try {
-    await new Promise((resolve) => setTimeout(resolve, 2000));
+    await new Promise((resolve) => setTimeout(resolve, 1000));
 
     await fetch("http://localhost:4000/comments", {
       method: "POST",
@@ -162,11 +168,16 @@ export async function submitContact(
     return {
       success: false,
       error: parsed.error.flatten().fieldErrors,
+      data: {
+        userName: formData.get("userName") as string,
+        userMail: formData.get("userMail") as string,
+        comment: formData.get("comment") as string,
+      },
     };
   }
 
   try {
-    await new Promise((resolve) => setTimeout(resolve, 2000));
+    await new Promise((resolve) => setTimeout(resolve, 1000));
 
     await fetch("http://localhost:4000/contact_messages", {
       method: "POST",
@@ -253,11 +264,20 @@ export async function submitReserve(
     return {
       success: false,
       error: parsed.error.flatten().fieldErrors,
+      data: {
+        userName: formData.get("userName"),
+        userMail: formData.get("userMail"),
+        userTable: formData.get("userTable"),
+        guestNumber: formData.get("guestNumber"),
+        userDate: formData.get("userDate"),
+        userContact: formData.get("userContact"),
+        comment: formData.get("comment"),
+      },
     };
   }
 
   try {
-    await new Promise((resolve) => setTimeout(resolve, 2000));
+    await new Promise((resolve) => setTimeout(resolve, 1000));
 
     await fetch("http://localhost:4000/reservations", {
       method: "POST",
