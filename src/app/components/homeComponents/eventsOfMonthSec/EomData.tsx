@@ -1,6 +1,5 @@
 import { Suspense } from "react";
 import CarouselOne from "../../utilityComponents/CarouselOne";
-import CardRow from "./EomCardRows";
 import EomCard from "./EomCards";
 
 type Event = {
@@ -21,7 +20,7 @@ type Card = {
   assetUrl: string;
 };
 
-// Convert Event → Card
+// Her strukturere hvordan det endelig data objekt skal se ud (card)
 const toCard = (e: Event): Card => {
   const [date, timeFull] = e.date.split("T");
   const time = timeFull.slice(0, 5);
@@ -30,7 +29,7 @@ const toCard = (e: Event): Card => {
     title: e.title,
     desc: e.description,
     date: date,
-    time: time, //toDo
+    time: time,
     location: e.location,
     assetUrl: e.asset.url,
   };
