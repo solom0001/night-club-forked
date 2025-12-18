@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import Button from "../utilityComponents/Button"; // Blogs.tsx
-
+import Button from "../utilityComponents/Button";
 import { Suspense } from "react";
 import Pagination from "./Pagination";
 
