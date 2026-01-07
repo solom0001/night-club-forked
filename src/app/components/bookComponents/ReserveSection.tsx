@@ -6,6 +6,7 @@ import ReserveForm from "./ReserveForm";
 
 export default function ReserveSection() {
   const [day, setDay] = useState<string>("");
+  const [selectedTable, setSelectedTable] = useState<string>("");
   const [reservations, setReservations] = useState([]);
 
   async function fetchReservations(date: string) {
@@ -18,9 +19,14 @@ export default function ReserveSection() {
 
   return (
     <div className="mt-8">
-      <Tables reservations={reservations} />
+      <Tables
+        reservations={reservations}
+        selectedTable={selectedTable}
+        setSelectedTable={setSelectedTable}
+      />
       <ReserveForm
         day={day}
+        selectedTable={selectedTable}
         setDay={(d: string) => {
           setDay(d);
           fetchReservations(d);

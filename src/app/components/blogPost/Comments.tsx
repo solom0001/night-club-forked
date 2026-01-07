@@ -33,7 +33,7 @@ const FetchComments = async ({ id }: { id: number }) => {
   console.log(comments);
 
   return (
-    <div className="grid items-center gap-12 pb-[90px]">
+    <div id="comments" className="grid items-center gap-12 pb-[90px]">
       <h1 className="uppercase px-[1.5rem] sm:px-0">
         {comments.length} Comments
       </h1>
