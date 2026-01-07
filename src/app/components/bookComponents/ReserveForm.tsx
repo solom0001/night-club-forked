@@ -12,6 +12,7 @@ import { useFormStatus } from "react-dom";
 type ReserveFormProps = {
   day: string;
   setDay: (day: string) => void;
+  selectedTable: string;
 };
 
 const initialState: ReserveFormState = {
@@ -25,13 +26,23 @@ const SubmitBtn = () => {
   return <Button text="Submit" type="submit" pending={pending} />;
 };
 
-const ReserveForm = ({ day, setDay }: ReserveFormProps) => {
+const ReserveForm = ({ day, setDay, selectedTable }: ReserveFormProps) => {
   const [state, formAction] = useActionState(submitReserve, initialState);
   return (
-    <form action={formAction} className="flex flex-col gap-6 mb-[90px]">
-      <h1 className="uppercase text-(44px) mb-6 px-[1.5rem] sm:px-0">
-        Book a table
-      </h1>
+    <form
+      action={formAction}
+      className="flex flex-col gap-6 mb-[90px] scroll-mt-[18vh]"
+      id="form"
+    >
+      <div className="grid mb-6">
+        <h1 className="uppercase text-(44px)  px-[1.5rem] sm:px-0">
+          Book a table
+        </h1>
+        <p className="text-(--red)">
+          After selecting a Date please check if your table is Available by it
+          not being maked as red.
+        </p>
+      </div>
       <div className="flex flex-col gap-6">
         <div className="flex sm:flex-row flex-col gap-6 px-[1.5rem] sm:px-0">
           <div className="flex flex-col gap-2 w-full">
@@ -63,7 +74,7 @@ const ReserveForm = ({ day, setDay }: ReserveFormProps) => {
               dataInput="userTable"
               type="text"
               placeholder="Table Number"
-              defaultValue={state?.data?.userTable ?? ""}
+              defaultValue={state?.data?.userTable ?? selectedTable}
             />
           </div>
           <div className="flex flex-col gap-2 w-full">
