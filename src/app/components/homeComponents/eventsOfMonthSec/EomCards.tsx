@@ -70,7 +70,7 @@ const EomCard = ({ desc, time, location, title, date, url }: CardProps) => {
       </div>
 
       {/* Description layer--------------------------------------------------*/}
-      <span className="bg-(--red) p-2 lg:p-4 relative justify-center lg:justify-start h-fit z-100 flex md:flex-[1] my-auto">
+      <span className="bg-(--red) p-2 lg:p-4 relative justify-center lg:justify-start h-fit z-10 flex md:flex-[1] my-auto">
         <ul className="flex flex-nowrap self-center gap-4 list-none">
           <li>{date}</li>
           <li>{time} PM</li>

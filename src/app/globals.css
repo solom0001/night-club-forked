@@ -252,9 +252,13 @@ body {
 }
 @media (max-width: 768px) {
   .gallery-grid {
-    grid-template-areas: "a" "a" "b" "b" "c" "c" "d" "d" "d" "e" "f" "g";
-    grid-template-columns: repeat(1, minmax(0, 1fr));
-    grid-template-rows: repeat(12, minmax(130px, 1fr));
+    grid-template-areas:
+      "a a b c"
+      "d d d e"
+      "f f g g";
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: repeat(3, minmax(70px, 1fr));
+    gap: 10px;
   }
 
   .yarl__carousel {
@@ -265,17 +269,20 @@ body {
     padding: 0 !important;
   }
 
+  .yarl__container {
+  }
+
   .yarl__navigation_prev {
-    left: 0 !important;
+    top: 93% !important;
+    left: 30% !important;
     width: fit-content;
-    margin-left: 1rem !important;
-    margin-top: 1rem !important;
+    margin: 1rem !important;
   }
   .yarl__navigation_next {
-    right: 0 !important;
+    top: 93% !important;
+    right: 30% !important;
     width: fit-content;
-    margin-right: 1rem !important;
-    margin-top: 1rem !important;
+    margin: 1rem !important;
   }
 }
 

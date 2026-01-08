@@ -18,14 +18,7 @@ const NavBar = ({ page }: NavBarProps) => {
     full-bleed content-padding border-b-(--red) border-b-3 border-t-(--red) border-t-3 bg-black/90 h-[124px] z-100"
     >
       <Link href={"/"} className="2xl:px-0 px-4 w-[189px] my-auto">
-        <Image
-          loading="eager"
-          src={"/assets/Logo.png"}
-          width={228}
-          height={54}
-          alt={"logo"}
-          className="2xl:px-0 px-4 min-w-[189px]"
-        />
+        <Image loading="eager" src={"/assets/Logo.png"} width={228} height={54} alt={"logo"} className="2xl:px-0 px-4 min-w-[189px]" />
       </Link>
       <button
         onClick={() => {
@@ -59,72 +52,40 @@ const NavBar = ({ page }: NavBarProps) => {
             text-(--red) flex flex-col items-center"
                 >
                   Home
-                  <Image
-                    loading="eager"
-                    src={"/assets/bottom_line.png"}
-                    width={128}
-                    height={10}
-                    alt={"logo"}
-                  />
+                  <Image loading="eager" src={"/assets/bottom_line.png"} width={128} height={10} alt={"logo"} />
                 </li>
               ) : (
-                <li className="hover:text-(--red) transition-all duration-200 ease-in">
-                  Home
-                </li>
+                <li className="hover:text-(--red) transition-all duration-200 ease-in">Home</li>
               )}
             </Link>
             <Link href={"/blogPost"} onClick={() => disableScroll.off()}>
               {page === "blog" ? (
                 <li className="text-(--red) flex flex-col items-center">
                   blog
-                  <Image
-                    loading="eager"
-                    src={"/assets/bottom_line.png"}
-                    width={128}
-                    height={10}
-                    alt={"logo"}
-                  />
+                  <Image loading="eager" src={"/assets/bottom_line.png"} width={128} height={10} alt={"logo"} />
                 </li>
               ) : (
-                <li className="hover:text-(--red) transition-all duration-200 ease-in">
-                  blog
-                </li>
+                <li className="hover:text-(--red) transition-all duration-200 ease-in">blog</li>
               )}
             </Link>
             <Link href={"/book"} onClick={() => disableScroll.off()}>
               {page === "book" ? (
                 <li className="text-(--red) flex flex-col items-center">
                   book table
-                  <Image
-                    loading="eager"
-                    src={"/assets/bottom_line.png"}
-                    width={128}
-                    height={10}
-                    alt={"logo"}
-                  />
+                  <Image loading="eager" src={"/assets/bottom_line.png"} width={128} height={10} alt={"logo"} />
                 </li>
               ) : (
-                <li className="hover:text-(--red) transition-all duration-200 ease-in">
-                  book table
-                </li>
+                <li className="hover:text-(--red) transition-all duration-200 ease-in">book table</li>
               )}
             </Link>
             <Link href={"/contact"} onClick={() => disableScroll.off()}>
               {page === "contact" ? (
                 <li className="text-(--red) flex flex-col items-center">
                   contact us
-                  <Image
-                    loading="eager"
-                    src={"/assets/bottom_line.png"}
-                    width={128}
-                    height={10}
-                    alt={"logo"}
-                  />
+                  <Image loading="eager" src={"/assets/bottom_line.png"} width={128} height={10} alt={"logo"} />
                 </li>
               ) : (
-                <li className="hover:text-(--red) transition-all duration-200 ease-in">
-                  contact us
-                </li>
+                <li className="hover:text-(--red) transition-all duration-200 ease-in">contact us</li>
               )}
             </Link>
           </ul>
@@ -138,77 +99,45 @@ const NavBar = ({ page }: NavBarProps) => {
             text-(--red) flex flex-col items-center"
             >
               Home
-              <Image
-                loading="eager"
-                src={"/assets/bottom_line.png"}
-                width={128}
-                height={10}
-                alt={"logo"}
-              />
+              <Image loading="eager" src={"/assets/bottom_line.png"} width={128} height={10} alt={"logo"} />
             </li>
           ) : (
-            <li className="hover:text-(--red) transition-all duration-200 ease-in mr-[-1rem]">
-              Home
-            </li>
+            <li className="hover:text-(--red) transition-all duration-200 ease-in mr-[-1rem]">Home</li>
           )}
         </Link>
         <Link href={"/blogPost"}>
           {page === "blog" ? (
             <li className="text-(--red) flex flex-col items-center">
               blog
-              <Image
-                loading="eager"
-                src={"/assets/bottom_line.png"}
-                width={128}
-                height={10}
-                alt={"logo"}
-              />
+              <Image loading="eager" src={"/assets/bottom_line.png"} width={128} height={10} alt={"logo"} />
             </li>
           ) : (
-            <li className="hover:text-(--red) transition-all duration-200 ease-in">
-              blog
-            </li>
+            <li className="hover:text-(--red) transition-all duration-200 ease-in">blog</li>
           )}
         </Link>
         <Link href={"/book"}>
           {page === "book" ? (
             <li className="text-(--red) flex flex-col items-center">
               book table
-              <Image
-                loading="eager"
-                src={"/assets/bottom_line.png"}
-                width={128}
-                height={10}
-                alt={"logo"}
-              />
+              <Image loading="eager" src={"/assets/bottom_line.png"} width={128} height={10} alt={"logo"} />
             </li>
           ) : (
-            <li className="hover:text-(--red) transition-all duration-200 ease-in">
-              book table
-            </li>
+            <li className="hover:text-(--red) transition-all duration-200 ease-in">book table</li>
           )}
         </Link>
         <Link href={"/contact"}>
           {page === "contact" ? (
             <li className="text-(--red) flex flex-col items-center ml-6">
               contact us
-              <Image
-                loading="eager"
-                src={"/assets/bottom_line.png"}
-                width={128}
-                height={10}
-                alt={"logo"}
-              />
+              <Image loading="eager" src={"/assets/bottom_line.png"} width={128} height={10} alt={"logo"} />
             </li>
           ) : (
-            <li className="hover:text-(--red) transition-all duration-200 ease-in  ml-6">
-              contact us
-            </li>
+            <li className="hover:text-(--red) transition-all duration-200 ease-in  ml-6">contact us</li>
           )}
         </Link>
-        <li className="hover:text-(--red) transition-all duration-200 ease-in">
+        {/* <li className="hover:text-(--red) transition-all duration-200 ease-in">
           log in
-        </li>
+        </li> */}
       </ul>
       <span className="absolute w-[68px] h-[68px] rotate-45 bg-(--red) top-[-34px] left-[-34px]"></span>
       <span className="absolute w-[68px] h-[68px] rotate-45 bg-(--red) bottom-[-34px] right-[-34px]"></span>
