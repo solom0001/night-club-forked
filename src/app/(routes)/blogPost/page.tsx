@@ -1,6 +1,7 @@
 import NavBar from "@/app/components/utilityComponents/Navbar";
 import PageTitle from "@/app/components/utilityComponents/PageTitle";
 import Footer from "@/app/components/utilityComponents/footerComps/Footer";
+import SubscriptionSection from "@/app/components/homeComponents/SubscriptionSection/SubscriptionSection";
 import { Suspense } from "react";
 
 import Blogs from "@/app/components/blogComponents/Blogs";
@@ -14,17 +15,13 @@ async function BlogsPage({ page }: { page: number }) {
       <Suspense>
         <Blogs page={page} />
       </Suspense>
-
+      <SubscriptionSection></SubscriptionSection>
       <Footer />
     </div>
   );
 }
 
-export default async function ProductListContainer({
-  searchParams,
-}: {
-  searchParams: { page: number };
-}) {
+export default async function ProductListContainer({ searchParams }: { searchParams: { page: number } }) {
   const { page } = await searchParams;
   console.log(page);
   return <BlogsPage page={page} />;

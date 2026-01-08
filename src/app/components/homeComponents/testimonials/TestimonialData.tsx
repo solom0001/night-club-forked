@@ -23,11 +23,8 @@ const TestimonialData = async ({}) => {
 
   return (
     <Suspense>
-      <div
-        className="items-center justify-center full-bleed grid h-[746px] grid-cols-subgrid 
-      [&>*]:col-[content] p-4 lg:p-12 bg-[url('/assets/bg/footerbg.jpg')] bg-cover bg-center relative before:z-10 before:absolute before:content-[''] before:inset-0 before:h-full before:w-full before:bg-black/70 bg-cover bg-center"
-      >
-        <CarouselOne pushStyle="z-20 h-[500px]! " slides={slides} />
+      <div className="full-bleed grid h-[746px] grid-cols-subgrid [&>*]:col-[content] p-4 lg:p-12 bg-[url('/assets/bg/footerbg.jpg')] bg-cover bg-center relative before:z-10 before:absolute before:content-[''] before:inset-0 before:h-full before:w-full before:bg-black/70 bg-cover bg-center overflow-hidden!">
+        <CarouselOne pushStyle="z-20 h-[620px]! " slides={slides} />
       </div>
     </Suspense>
   );

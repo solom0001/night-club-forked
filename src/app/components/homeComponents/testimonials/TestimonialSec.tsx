@@ -15,15 +15,15 @@ type Testimonial = {
 
 const TestimonialSec = ({ id, name, content, facebook, twitter, link }: Testimonial) => {
   return (
-    <div key={id} className="flex flex-col w-full p-4 h-full gap-2">
-      <div className="flex flex-col gap-4 items-center">
-        <div className="aspect-square w-[12rem]">
-          <Image src={link} width={200} height={200} alt={`picture of ${name}`} unoptimized className="object-cover object-center" />
+    <div key={id} className="flex flex-col w-full p-4 h-fit gap-2 ">
+      <div className="flex flex-col gap-4 items-center justify-center">
+        <div className="aspect-square w-[200px]">
+          <Image src={link} width={300} height={300} alt={`picture of ${name}`} unoptimized className="object-cover object-center" />
         </div>
         <h2 className="uppercase">{name}</h2>
       </div>
 
-      <span className="max-w-[1000px] mx-auto text-center justify-center overflow-y-scroll md:overflow-hidden mt-2">
+      <span className="max-w-[1000px]justify-center text-center h-full md:overflow-hidden mt-2">
         <p>{content}</p>
       </span>
       <div className=" w-fit h-fit mx-auto col-start-2 mt-8">
