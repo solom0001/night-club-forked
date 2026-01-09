@@ -1,6 +1,7 @@
 import { Suspense } from "react";
 import Recents from "./Recents";
 import Link from "next/link";
+import Image from "next/image";
 
 type Blog = {
   id: number;
@@ -25,12 +26,10 @@ const RecentPosts = async () => {
       <div className="flex flex-col gap-12">
         <h2>Recent posts</h2>
         {blogs.map((blog) => (
-          <Link
-            href={`/blogPost/${blog.id}`}
-            key={blog.id}
-            className="flex flex-col gap-1"
-          >
-            <Recents desc={truncate(blog.content)} image={blog.asset.url} />
+          <Link href={`/blogPost/${blog.id}`} key={blog.id} className="flex flex-col gap-1">
+            <Recents desc={truncate(blog.content)}>
+              <Image src={blog.asset.url} alt="recent post" unoptimized width={100} height={100} className="w-full h-full object-cover" />
+            </Recents>
           </Link>
         ))}
       </div>

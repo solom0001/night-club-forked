@@ -21,8 +21,11 @@ html {
 }
 
 body {
-  background-image: url("/assets/bg/pattern_bg.jpg");
-  background-repeat: repeat;
+  background-image: url("/assets/bg/pattern_bg.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
   color: var(--white);
   font-family: ubuntu;
   & > div {

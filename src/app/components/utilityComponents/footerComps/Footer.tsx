@@ -2,6 +2,7 @@ import Image from "next/image";
 import Recents from "./Recents";
 import SoMeIcons from "../SoMeIcons";
 import RecentPosts from "./RecentPosts";
+import { TiSocialTwitter } from "react-icons/ti";
 
 const Footer = () => {
   return (
@@ -35,8 +36,12 @@ const Footer = () => {
             <RecentPosts />
             <div className="flex flex-col gap-12">
               <h2>Recent tweets</h2>
-              <Recents desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non rutrum felis." image="/assets/bg/header_bg_1.jpg" />
-              <Recents desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non rutrum felis." image="/assets/bg/header_bg_1.jpg" />
+              <Recents desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non rutrum felis.">
+                <TiSocialTwitter size="50%" className="text-(--red) mx-auto" />
+              </Recents>
+              <Recents desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non rutrum felis.">
+                <TiSocialTwitter size="50%" className="text-(--red) mx-auto" />
+              </Recents>
             </div>
           </div>
         </div>
