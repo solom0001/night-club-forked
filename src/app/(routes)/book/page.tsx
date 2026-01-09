@@ -5,7 +5,7 @@ import Footer from "@/app/components/utilityComponents/footerComps/Footer";
 import SubscriptionSection from "@/app/components/homeComponents/SubscriptionSection/SubscriptionSection";
 export default function BookPage() {
   return (
-    <div className="[&>*]:col-[content]">
+    <div role="main" className="[&>*]:col-[content]">
       <NavBar page="book" />
       <PageTitle text="Book table" />
 

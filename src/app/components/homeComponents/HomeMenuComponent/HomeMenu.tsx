@@ -19,7 +19,10 @@ const HomeMenu = () => {
   };
 
   return (
-    <div className="w-[80px] hidden 2xl:sticky 2xl:top-60 mt-[15rem] ml-auto mr-8 2xl:block z-100 col-3! row-span-3">
+    <div
+      role="navigation"
+      className="w-[80px] hidden xl:sticky xl:top-50 mt-[10rem] ml-auto mr-8 2xl:block z-100 col-3! row-span-3"
+    >
       <h1
         onClick={toggleMenu}
         className={`${

@@ -48,7 +48,7 @@ export default async function BlogPostSite({
 
   return (
     <Suspense fallback={<div>Loading blog post...</div>}>
-      <div className="[&>*]:col-[content]">
+      <div role="main" className="[&>*]:col-[content]">
         <NavBar page="blog" />
         <PageTitle text="blog post" />
         <BlogPostContent post={postWithComments} />

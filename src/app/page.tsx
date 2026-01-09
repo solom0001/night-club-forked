@@ -24,7 +24,10 @@ export default function Home() {
   return (
     <div className="full-bleed">
       <HomeHero></HomeHero>
-      <div className="relative grid grid-cols-[1fr_[content]_minmax(0,1440px)_1fr] full-bleed [&>*]:col-[content] mt-[-124px] w-full">
+      <div
+        role="main"
+        className="relative grid grid-cols-[1fr_[content]_minmax(0,1440px)_1fr] full-bleed [&>*]:col-[content] mt-[-124px] w-full"
+      >
         <NavBar page="home" />
         <HomeMenu></HomeMenu>
         <div
