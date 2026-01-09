@@ -18,7 +18,6 @@ const WelcomeSec = () => {
             height={50}
             width={50}
             alt="dancing icon"
-            unoptimized
             className="w-full aspect-square object-center"
           />
         }

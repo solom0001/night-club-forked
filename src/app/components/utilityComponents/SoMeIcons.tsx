@@ -1,6 +1,5 @@
 "use client";
 import { TiSocialFacebook, TiSocialTwitter } from "react-icons/ti";
-// import { TiSocialTwitter } from "react-icons/ti";
 import { FaSnapchatGhost } from "react-icons/fa";
 
 const SoMeIcons = ({
