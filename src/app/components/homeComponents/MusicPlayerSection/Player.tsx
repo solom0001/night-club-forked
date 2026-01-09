@@ -41,13 +41,22 @@ const Player = ({ musicList, current }: PlayerProps) => {
                 <img
                   src="/assets/icon/Play.svg"
                   className="h-[52px] w-[52px] p-1 pl-2 rounded-[50%]  border-5 border-(--white)"
+                  alt="button play"
                 />
               ),
               rewind: (
-                <img src="/assets/icon/fast-backward.svg" className="w-8" />
+                <img
+                  src="/assets/icon/fast-backward.svg"
+                  className="w-8"
+                  alt="button backward"
+                />
               ),
               forward: (
-                <img src="/assets/icon/fast-forward.svg" className="w-8" />
+                <img
+                  src="/assets/icon/fast-forward.svg"
+                  className="w-8"
+                  alt="button forward"
+                />
               ),
             }}
             customAdditionalControls={[]}

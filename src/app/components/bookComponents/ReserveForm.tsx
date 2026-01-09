@@ -31,14 +31,14 @@ const ReserveForm = ({ day, setDay, selectedTable }: ReserveFormProps) => {
   return (
     <form
       action={formAction}
-      className="flex flex-col gap-6 mb-[90px] scroll-mt-[18vh]"
+      className="flex flex-col gap-6 mb-[90px] sm:scroll-mt-[14vh] scroll-mt-[16vh]"
       id="form"
     >
       <div className="grid mb-6">
         <h1 className="uppercase text-(44px)  px-[1.5rem] sm:px-0">
           Book a table
         </h1>
-        <p className="text-(--red)">
+        <p className="text-(--red) px-[1.5rem] sm:px-0">
           After selecting a Date please check if your table is Available by it
           not being maked as red.
         </p>

@@ -44,6 +44,7 @@ const MusicListCarousel = ({
         <button
           onClick={prev}
           className="border p-2 hover:scale-105 transition"
+          aria-label="previous music"
         >
           <MdOutlineArrowLeft size={35} />
         </button>
@@ -93,6 +94,7 @@ const MusicListCarousel = ({
         <button
           onClick={next}
           className="border p-2 hover:scale-105 transition"
+          aria-label="next music"
         >
           <MdOutlineArrowRight size={35} />
         </button>
@@ -144,6 +146,7 @@ const MusicListCarousel = ({
           <button
             onClick={prev}
             className="border p-2 hover:scale-105 transition"
+            aria-label="previous music"
           >
             <MdOutlineArrowLeft size={35} />
           </button>
@@ -151,6 +154,7 @@ const MusicListCarousel = ({
           <button
             onClick={next}
             className="border p-2 hover:scale-105 transition"
+            aria-label="next music"
           >
             <MdOutlineArrowRight size={35} />
           </button>
