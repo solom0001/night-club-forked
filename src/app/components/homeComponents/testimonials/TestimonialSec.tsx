@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { Suspense } from "react";
 import SoMeIcons from "../../utilityComponents/SoMeIcons";
 
 type Testimonial = {
@@ -18,7 +17,7 @@ const TestimonialSec = ({ id, name, content, facebook, twitter, link }: Testimon
     <div key={id} className="flex flex-col w-full p-4 h-fit gap-2 ">
       <div className="flex flex-col gap-4 items-center justify-center">
         <div className="aspect-square w-[200px]">
-          <Image src={link} width={300} height={300} alt={`picture of ${name}`} unoptimized className="object-cover object-center" />
+          <Image src={link} width={300} height={300} alt={`Image of ${name}`} unoptimized className="object-cover object-center" />
         </div>
         <h2 className="uppercase">{name}</h2>
       </div>

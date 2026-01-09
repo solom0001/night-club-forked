@@ -1,6 +1,5 @@
 "use client";
-import { ReactNode, useEffect, useState } from "react";
-import { useRef } from "react";
+import { ReactNode, useEffect, useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 
 type Slide = {

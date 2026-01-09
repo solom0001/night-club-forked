@@ -9,6 +9,7 @@ const WelcomeSec = () => {
       <WelcomeCard
         title="night club"
         backgroundImg="/assets/wlmeP1png.png"
+        imgAlt="night club"
         desc="There are many variations of passages of Lorem Ipsum available, 
         but the majority have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly believable"
         icon={
@@ -25,6 +26,7 @@ const WelcomeSec = () => {
       <WelcomeCard
         title="restaurant"
         backgroundImg="/assets/wlcmP2.png"
+        imgAlt="restaurant"
         desc="There are many variations of passages of Lorem Ipsum available, 
         but the majority have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly believable"
         icon={
@@ -40,6 +42,7 @@ const WelcomeSec = () => {
       <WelcomeCard
         title="bar"
         backgroundImg="/assets/wlcmP3.png"
+        imgAlt="bar"
         desc="There are many variations of passages of Lorem Ipsum available, 
         but the majority have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly believable"
         icon={

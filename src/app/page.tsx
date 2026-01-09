@@ -30,24 +30,15 @@ export default function Home() {
       >
         <NavBar page="home" />
         <HomeMenu></HomeMenu>
-        <div
-          id="welcome"
-          className="scroll-mt-[7vh] flex flex-col justify-center items-center w-full h-fit py-[90px] gap-6 "
-        >
+        <div id="welcome" className="scroll-mt-[7vh] flex flex-col justify-center items-center w-full h-fit py-[90px] gap-6 ">
           <TitleText text="welcome in nightclub" />
           <WelcomeSec />
         </div>
-        <div
-          id="events"
-          className="scroll-mt-[7vh] items-center justify-center full-bleed grid grid-cols-[1fr_minmax(0,1440px)_1fr] [&>*]:col-start-2 py-[90px] gap-6 bg-[url('/assets/bg/slider_bg_overlay.png')] bg-cover bg-center "
-        >
+        <div id="events" className="scroll-mt-[7vh] items-center justify-center full-bleed grid grid-cols-[1fr_minmax(0,1440px)_1fr] [&>*]:col-start-2 py-[90px] gap-6 bg-[url('/assets/bg/slider_bg_overlay.webp')] bg-cover bg-center ">
           <TitleText text="Events of the Month" />
           <EomData />
         </div>
-        <div
-          id="gallery"
-          className="scroll-mt-[7vh] items-center justify-center full-bleed grid grid-cols-[1fr_minmax(0,1440px)_1fr] [&>*]:col-start-2 py-[90px] gap-6"
-        >
+        <div id="gallery" className="scroll-mt-[7vh] items-center justify-center full-bleed grid grid-cols-[1fr_minmax(0,1440px)_1fr] [&>*]:col-start-2 py-[90px] gap-6">
           <TitleText text="night club gallery" />
           <GalleryData />
         </div>

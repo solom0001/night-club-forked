@@ -1,6 +1,6 @@
 "use client";
-import { TiSocialFacebook } from "react-icons/ti";
-import { TiSocialTwitter } from "react-icons/ti";
+import { TiSocialFacebook, TiSocialTwitter } from "react-icons/ti";
+// import { TiSocialTwitter } from "react-icons/ti";
 import { FaSnapchatGhost } from "react-icons/fa";
 
 const SoMeIcons = ({
@@ -17,7 +17,7 @@ const SoMeIcons = ({
       className="flex flex-nowrap gap-4 justify-between min-w-0 max-w-[150px] [&>*]:aspect-square [&>*]:border-2 [&>*]:border-(--white)
       [&>*]:hover:border-(--red) transition-all duration-300 ease-in-out "
     >
-      <a href={facebook} className="group">
+      <a href={facebook} aria-label="Facebook Link" className="group">
         <div className="">
           <TiSocialFacebook
             size="100%"
@@ -25,7 +25,7 @@ const SoMeIcons = ({
           />
         </div>
       </a>
-      <a href={twitter} className="group">
+      <a href={twitter} aria-label="Twitter Link" className="group">
         <div className="">
           <TiSocialTwitter
             size="100%"
@@ -33,7 +33,7 @@ const SoMeIcons = ({
           />
         </div>
       </a>
-      <a href={snapchat} className="group">
+      <a href={snapchat} aria-label="SnapChat Link" className="group">
         <div className="">
           <FaSnapchatGhost
             size="100%"

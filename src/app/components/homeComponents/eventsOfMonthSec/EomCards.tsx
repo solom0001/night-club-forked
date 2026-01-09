@@ -79,14 +79,7 @@ const EomCard = ({ desc, time, location, title, date, url }: CardProps) => {
           className="group-hover:border-t group-hover:border-b border-(--red) min-h-0 after:content-[''] after:absolute after:inset-0 after:w-full after:h-full 
         after:bg-black/0 after:pointer-events-none group-hover:after:bg-black/50 h-auto"
         >
-          <Image
-            src={url}
-            alt="event of month"
-            width={400}
-            height={400}
-            unoptimized
-            className="w-full h-full object-cover"
-          />
+          <Image src={url} alt="Image of month event" width={400} height={400} unoptimized className="w-full h-full object-cover" />
         </div>
       </div>
 

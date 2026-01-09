@@ -2,22 +2,20 @@
 import Image from "next/image";
 import { motion, Variants } from "framer-motion";
 import { useState } from "react";
-import { useRef } from "react";
 
 type WelcomeProps = {
   title: string;
   backgroundImg: string;
   desc: string;
   icon: React.ReactNode;
+  imgAlt: string;
 };
 
-const WelcomeCard = ({ title, backgroundImg, desc, icon }: WelcomeProps) => {
+const WelcomeCard = ({ title, backgroundImg, desc, icon, imgAlt }: WelcomeProps) => {
   //---- mobile----->
   // const ref = useRef<HTMLDivElement>(null);
 
   const [isOpen, setIsOpen] = useState(false);
-
-  const handleClick = () => {};
 
   const parentVariants: Variants = {
     rest: {},
@@ -54,7 +52,7 @@ const WelcomeCard = ({ title, backgroundImg, desc, icon }: WelcomeProps) => {
       >
         {/* billede layer--------------------------------------------------*/}
         <div className="relative z-10">
-          <Image src={backgroundImg} alt="logo" fill className="object-cover" />
+          <Image src={backgroundImg} alt={`Image of ${imgAlt}`} fill className="object-cover" />
         </div>
 
         {/* Tekst layer--------------------------------------------------*/}
