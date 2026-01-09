@@ -11,6 +11,7 @@ const WelcomeSec = () => {
       <WelcomeCard
         title="night club"
         backgroundImg="/assets/wlmeP1png.png"
+        imgAlt="night club"
         desc="There are many variations of passages of Lorem Ipsum available, 
         but the majority have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly believable"
         icon={<Image src="assets/icon/favicon-red.svg" height={50} width={50} alt="dancing icon" unoptimized className="w-full aspect-square object-center" />}
@@ -18,6 +19,7 @@ const WelcomeSec = () => {
       <WelcomeCard
         title="restaurant"
         backgroundImg="/assets/wlcmP2.png"
+        imgAlt="restaurant"
         desc="There are many variations of passages of Lorem Ipsum available, 
         but the majority have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly believable"
         icon={<GiHotMeal size={30} style={{ color: "var(--red)" }} className="object-cover w-full h-full" />}
@@ -25,6 +27,7 @@ const WelcomeSec = () => {
       <WelcomeCard
         title="bar"
         backgroundImg="/assets/wlcmP3.png"
+        imgAlt="bar"
         desc="There are many variations of passages of Lorem Ipsum available, 
         but the majority have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly believable"
         icon={<PiCheersFill size={30} style={{ color: "var(--red)" }} className="object-cover w-full h-full" />}

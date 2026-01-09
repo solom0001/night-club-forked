@@ -43,7 +43,7 @@ const VideoPlayer = ({ src }: { src: string }) => {
           className="absolute z-20 w-[150px]  
         top-1/2 left-1/2 hover:cursor-pointer opacity-30 group aspect-square"
         >
-          <Image src="/assets/icon/Play.svg" alt="play button" fill unoptimized className="opacity-70 group-hover:opacity-100 w-full h-full object-contain" />
+          <Image src="/assets/icon/Play.svg" alt="play button" fill unoptimized className="opacity-85 group-hover:opacity-100 w-1/2 h-1/2 object-contain" />
         </div>
       )}
     </div>

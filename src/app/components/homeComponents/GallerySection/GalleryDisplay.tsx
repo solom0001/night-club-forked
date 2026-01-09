@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { motion, Variants, useInView, useAnimation } from "framer-motion";
-import { ReactNode, useEffect, useRef, useState } from "react";
+import { motion, Variants, useInView} from "framer-motion";
+import { useRef, useState } from "react";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 import Button from "../../utilityComponents/Button";
