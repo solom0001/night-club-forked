@@ -5,7 +5,7 @@ import ContactMessage from "@/app/components/contactComponents/ContactMessage";
 import SubscriptionSection from "@/app/components/homeComponents/SubscriptionSection/SubscriptionSection";
 export default async function BlogPostSite() {
   return (
-    <div className="[&>*]:col-[content]">
+    <div role="main" className="[&>*]:col-[content]">
       <NavBar page="contact" />
       <PageTitle text="Contact Us" />
       <ContactMessage></ContactMessage>

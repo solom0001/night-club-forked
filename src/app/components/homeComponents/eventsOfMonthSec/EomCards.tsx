@@ -35,7 +35,12 @@ const EomCard = ({ desc, time, location, title, date, url }: CardProps) => {
   };
 
   return (
-    <motion.div variants={parentVariants} initial="rest" whileHover="hover" className=" group w-full max-h-[350px] lg:max-h-full flex flex-col overflow-hidden ">
+    <motion.div
+      variants={parentVariants}
+      initial="rest"
+      whileHover="hover"
+      className=" group w-full max-h-[350px] lg:max-h-full flex flex-col overflow-hidden "
+    >
       {/* billede og Tekst layer--------------------------------------------------*/}
       <div
         className="grid flex:7 grid-cols-1 grid-rows-1 [&>*]:row-span-full [&>*]:col-span-full relative z-5 border-b-1 border-(--black) hover:before:content-[''] hover:before:absolute 
@@ -45,14 +50,23 @@ const EomCard = ({ desc, time, location, title, date, url }: CardProps) => {
 
         {/*(Top elements)----->*/}
         <div className="w-full h-full flex flex-col relative z-10 group-hover:border-t group-hover:border-(--red) ">
-          <motion.span variants={topVariants} className="flex w-full h-[70%]  items-center before:content-[''] before:absolute before:w-[120px] before:h-[200px] before:bg-(--red) before:top-[-100] before:left-[-75] before:rotate-45 relative">
-            <a className="px-4 py-2 mx-auto bg-(--red) text-(--white)" href="/book">
+          <motion.span
+            variants={topVariants}
+            className="flex w-full h-[70%]  items-center before:content-[''] before:absolute before:w-[120px] before:h-[200px] before:bg-(--red) before:top-[-100] before:left-[-75] before:rotate-45 relative"
+          >
+            <a
+              className="px-4 py-2 mx-auto bg-(--red) text-(--white)"
+              href="/book"
+            >
               Book Now
             </a>
           </motion.span>
 
           {/*(bottom elements)----->*/}
-          <motion.div variants={bottomVariants} className="h-[30%] flex w-full relative">
+          <motion.div
+            variants={bottomVariants}
+            className="h-[30%] flex w-full relative"
+          >
             <span className="flex flex-col p-4 bg-background/90 h-full overflow-y-auto ">
               <h2 className="">{title}</h2>
               <p>{desc}</p>
@@ -71,7 +85,7 @@ const EomCard = ({ desc, time, location, title, date, url }: CardProps) => {
 
       {/* Description layer--------------------------------------------------*/}
       <span className="bg-(--red) p-2 lg:p-4 relative justify-center lg:justify-start h-fit z-10 flex md:flex-[1] my-auto">
-        <ul className="flex flex-nowrap self-center gap-4 list-none">
+        <ul className="flex flex-nowrap self-center gap-4 list-none [&>*]:text-[20px]">
           <li>{date}</li>
           <li>{time} PM</li>
           <li>{location}</li>
