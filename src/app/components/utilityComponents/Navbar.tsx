@@ -29,6 +29,7 @@ const NavBar = ({ page }: NavBarProps) => {
         />
       </Link>
       <button
+        aria-label="burger button"
         onClick={() => {
           setMenuOpen((prev) => !prev);
           disableScroll.on();
